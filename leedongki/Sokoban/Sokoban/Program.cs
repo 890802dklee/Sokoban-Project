@@ -20,9 +20,9 @@ while (true)
     // --------------------------------------------- Render -------------------------------------------------------
     // 플레이어 출력하기
     Console.SetCursorPosition(Box1X, Box1Y);
-    Console.Write("s");
+    Console.Write("p");
     Console.SetCursorPosition(PlayerX, PlayerY);
-    Console.Write("z");
+    Console.Write("m");
     // --------------------------------------------- ProcessInput -------------------------------------------------
     ConsoleKey key = Console.ReadKey().Key;
     // --------------------------------------------- Update -------------------------------------------------------
@@ -43,6 +43,8 @@ while (true)
     {
         PlayerY = Math.Max(PlayerY - 1, 0);
     }
+
+
     if (PlayerX == Box1X && PlayerY == Box1Y && key == ConsoleKey.RightArrow)
     {
         PlayerX = Math.Min(PlayerX, HorizonMax - 1);
